@@ -1,0 +1,12 @@
+.bg-purple{
+  background-color: #3A3772;
+}
+
+.bg-purple-footer{
+  background-color: #3A3772;
+  color: #FFFFFF;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+}

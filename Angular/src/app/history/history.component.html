@@ -1,0 +1,54 @@
+<div class="container">
+  <form [formGroup]="searchData" class="form-inline my-2 my-lg-0 " style="justify-self: center;">
+    <input class="form-control mr-sm-3" type="search" placeholder="Search with Email" aria-label="Search" style="width: 90%;" formControlName='search'>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="submit()">Search</button>
+  </form>
+</div>
+
+<div class="container">
+  <h1 style="color: #6C8BFD;">Sent Details:</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Sender Email</th>
+        <th scope="col">Reciever Email</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Date and Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of senders; let i = index;">
+        <th scope="row">{{i + 1}}</th>
+        <td>{{user?.senderEmail}}</td>
+        <td>{{user?.recieverEmail}}</td>
+        <td>{{user?.amount}}</td>
+        <td>{{user?.timeStamp.toMillis() | date:'dd/MM/yyyy'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="container">
+  <h1 style="color: #6C8BFD;">Recieved Details:</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Reciever Email</th>
+        <th scope="col">Sender Email</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Date and Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let use of recievers; let i = index;">
+        <th scope="row">{{i + 1}}</th>
+        <td>{{use?.recieverEmail}}</td>
+        <td>{{use?.senderEmail}}</td>
+        <td>{{use?.amount}}</td>
+        <td>{{use?.timeStamp.toMillis() | date:'dd/MM/yyyy'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

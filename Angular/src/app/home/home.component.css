@@ -1,0 +1,29 @@
+
+.banner {
+  background-image: url("../../assets/images/bank.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 10%;
+  height: 150%;
+  width: 100%;
+}
+
+.banner-div {
+  margin-top: 5%;
+}
+
+.home-head h1{
+  color: #6C8BFD;
+  padding-bottom: 25px;
+}
+
+.text-style{
+  padding: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .banner{
+    display: none;
+  }
+}
